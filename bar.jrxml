@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="bar" language="groovy" pageWidth="432" pageHeight="842" columnWidth="392" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5dfa9109-5d9e-4559-b916-b93f70369273">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     bar.`id` AS bar_id,
+     bar.`item` AS bar_item,
+     bar.`qtt` AS bar_qtt
+FROM
+     `bar` bar]]>
+	</queryString>
+	<field name="bar_id" class="java.lang.Integer"/>
+	<field name="bar_item" class="java.lang.String"/>
+	<field name="bar_qtt" class="java.lang.Integer"/>
+	<title>
+		<band height="75" splitType="Stretch">
+			<staticText>
+				<reportElement x="80" y="15" width="209" height="20" uuid="51d3486a-16a9-4550-b543-f782c1a44f85"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[GOLF HOTEL KAKAMEGA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="54" y="35" width="250" height="20" uuid="216094b3-e303-4c95-b11d-9e3cf590016d"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BAR ITEMS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="192" y="55" width="112" height="20" uuid="d492a5a4-cf71-4998-a4ee-14cbad45da1d"/>
+				<box leftPadding="5">
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[QUANTITY]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="55" width="112" height="20" uuid="45bd33aa-6d7f-40ff-b029-b70de634dc2e"/>
+				<box leftPadding="5">
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ITEMS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="44" y="55" width="36" height="20" uuid="9cbbd757-8876-4870-b48f-a65980d479c6"/>
+				<box leftPadding="5">
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NO]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="192" y="0" width="112" height="20" uuid="e937b03e-47e5-46fd-9b87-7a84b81aa20b"/>
+				<box leftPadding="5">
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bar_qtt}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="44" y="0" width="36" height="20" uuid="08cc053e-718a-4db7-8b83-daebc8087c21"/>
+				<box leftPadding="5">
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="0" width="112" height="20" uuid="c2b3284f-9a39-480b-973a-184df631867b"/>
+				<box leftPadding="5">
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bar_item}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
